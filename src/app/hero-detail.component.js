@@ -14,6 +14,7 @@ var common_1 = require('@angular/common');
 var hero_service_1 = require('./hero.service');
 var hero_1 = require('./hero');
 require('rxjs/add/operator/switchMap');
+var router_animations_1 = require('./router.animations');
 var HeroDetailComponent = (function () {
     function HeroDetailComponent(heroService, route, location) {
         this.heroService = heroService;
@@ -40,6 +41,8 @@ var HeroDetailComponent = (function () {
             selector: 'my-hero-detail',
             templateUrl: './app/hero-detail.component.html',
             styleUrls: ['./app/hero-detail.component.css'],
+            animations: [router_animations_1.routerTransition()],
+            host: { '[@routerTransition]': '' }
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
     ], HeroDetailComponent);

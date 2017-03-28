@@ -4,11 +4,15 @@ import { HeroService } from './hero.service';
 
 import { Hero } from './hero';
 
+import { routerTransition } from './router.animations';
+
 @Component({
     selector: 'my-heroes',
     templateUrl:'./app/heroes.component.html',
     styleUrls: ['./app/heroes.component.css'],
-    providers: [HeroService]
+    providers: [HeroService],
+    animations: [routerTransition()],
+    host: {'[@routerTransition]': ''}
 })
 export class HeroesComponent {
     heroes: Hero[];

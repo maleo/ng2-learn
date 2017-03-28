@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var hero_service_1 = require('./hero.service');
+var router_animations_1 = require('./router.animations');
 var DashboardComponent = (function () {
     function DashboardComponent(heroService) {
         this.heroService = heroService;
@@ -24,6 +25,8 @@ var DashboardComponent = (function () {
             selector: 'my-dashboard',
             templateUrl: './app/dashboard.component.html',
             styleUrls: ['./app/dashboard.component.css'],
+            animations: [router_animations_1.routerTransition()],
+            host: { '[@routerTransition]': '' }
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])
     ], DashboardComponent);

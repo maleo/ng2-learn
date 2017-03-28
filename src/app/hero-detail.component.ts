@@ -8,10 +8,15 @@ import { Hero } from './hero';
 
 import 'rxjs/add/operator/switchMap';
 
+import { routerTransition } from './router.animations';
+
+
 @Component({
   selector: 'my-hero-detail',
   templateUrl: './app/hero-detail.component.html',
   styleUrls: ['./app/hero-detail.component.css'],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 
 export class HeroDetailComponent implements OnInit {

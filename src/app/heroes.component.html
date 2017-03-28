@@ -9,7 +9,7 @@
 
 <div *ngIf="selectedHero">
     <h2>
-        <span myHighlight>{{selectedHero.name | uppercase}}</span> is my hero
+        <span [myHighlight]="'green'">{{selectedHero.name | uppercase}}</span> is my hero
     </h2>
     <button (click)="gotoDetail()">View Details</button>
 </div>
