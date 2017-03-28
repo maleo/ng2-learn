@@ -16,9 +16,12 @@ import      { HeroDetailComponent }     from './hero-detail.component';
 import      { HeroSearchComponent }     from './hero-search.component';
 import      { HeroService }             from './hero.service';
 
+import 		{ HighlightDirective } 		from './highlight.directive';
+
+
 @NgModule({
     imports:        [ BrowserModule, FormsModule, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDataService), AppRoutingModule ],
-    declarations:   [ AppComponent, DashboardComponent, HeroDetailComponent, HeroesComponent, HeroSearchComponent ],
+    declarations:   [ AppComponent, DashboardComponent, HeroDetailComponent, HeroesComponent, HeroSearchComponent, HighlightDirective ],
     providers:      [ HeroService ],
     bootstrap:      [ AppComponent ]
 })

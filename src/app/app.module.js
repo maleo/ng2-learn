@@ -22,13 +22,14 @@ var heroes_component_1 = require('./heroes.component');
 var hero_detail_component_1 = require('./hero-detail.component');
 var hero_search_component_1 = require('./hero-search.component');
 var hero_service_1 = require('./hero.service');
+var highlight_directive_1 = require('./highlight.directive');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService), app_routing_module_1.AppRoutingModule],
-            declarations: [app_component_1.AppComponent, dashboard_component_1.DashboardComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, hero_search_component_1.HeroSearchComponent],
+            declarations: [app_component_1.AppComponent, dashboard_component_1.DashboardComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, hero_search_component_1.HeroSearchComponent, highlight_directive_1.HighlightDirective],
             providers: [hero_service_1.HeroService],
             bootstrap: [app_component_1.AppComponent]
         }), 
